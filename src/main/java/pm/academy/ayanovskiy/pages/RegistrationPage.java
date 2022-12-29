@@ -24,7 +24,7 @@ public class RegistrationPage extends BasePage {
         try {
             return waitForExpectedElement(closeRegistrationFormBtn).isDisplayed();
         } catch (org.openqa.selenium.TimeoutException tmEx) {
-            LOG.error("Error: " + tmEx);
+            LOG.error(String.format("Error: %s", tmEx));
             return false;
         }
     }
